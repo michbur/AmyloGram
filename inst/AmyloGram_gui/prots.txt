@@ -1,0 +1,8 @@
+>AMY133|Alpha 1|N-terminal domain of Ribosomal protein L9
+GYANNFLFKQG
+>AMY138|Alpha 6|Glutathione S Transeferase P domain II (Glutex)
+QISFADYNLLDLLRIHQVLN
+>AMY143|M8|Spectrin SH3
+DILTLLNSTNKDWWKVEVND
+>Ada-2h
+VPSNEEQIKNLLQLEAQEHLQY
