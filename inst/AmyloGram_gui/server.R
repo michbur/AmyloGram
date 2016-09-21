@@ -1,8 +1,10 @@
 library(shiny)
 library(markdown)
 library(DT)
-source("functions.R")
-load("AmyloGram.RData")
+library(AmyloGram)
+
+data(AmyloGram_model)
+data(spec_sens)
 
 options(shiny.maxRequestSize=10*1024^2)
 
