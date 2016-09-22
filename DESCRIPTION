@@ -3,12 +3,13 @@ Type: Package
 Title: Prediction of Amyloid Proteins
 Version: 1.0
 LazyData: true
+Date: 2016-09-23
 Authors@R: c(person("Michal", "Burdukiewicz", email =
     "michalburdukiewicz@gmail.com", role = c("cre", "aut")),
     person("Piotr", "Sobczyk", email = "sobbombo@gmail.com", role = "ctb"),
     person("Stefan", "Roediger", email = "stefan.roedigier@b-tu.de", role = "ctb"))
-Description: Prediction of amyloid proteins using n-gram encoding and
-    random forests. The implemented algorithm can be accessed from
+Description: AmyloGram predicts amyloid proteins using random forests trained on the
+    n-gram encoded peptides. The implemented algorithm can be accessed from
     both the command line and shiny-based GUI.
 License: GPL-3
 URL: https://github.com/michbur/AmyloGram

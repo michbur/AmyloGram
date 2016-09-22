@@ -2,17 +2,17 @@ library(shiny)
 
 shinyUI(fluidPage(title = "AmyloGram",
                   includeCSS = "www/shiny_paper.css",
-                  
-                  headerPanel("AmyloGram"),
-                  
+
+                  headerPanel(""),
+
                   sidebarLayout(
-                    sidebarPanel(style = "background-color: #cccccc;",
+                    sidebarPanel(style = "background-color: #e0e0e0;",
                                  includeMarkdown("readme.md"),
                                  pre(includeText("prots.txt")),
                                  uiOutput("dynamic_ui")
                     ),
-                    
+
                     mainPanel(
-                      uiOutput("dynamic_tabset")    
+                      uiOutput("dynamic_tabset")
                     )
                   )))

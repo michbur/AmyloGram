@@ -51,7 +51,7 @@ shinyServer(function(input, output) {
 
   output$dynamic_ui <- renderUI({
     if(!is.null(prediction())) {
-      tags$p("Refresh page (press F5) to start a new query with signalHsmm.")
+      tags$p(HTML("<A HREF=\"javascript:history.go(0)\">Start a new query with signalHsmm</A>"))
     }
   })
 

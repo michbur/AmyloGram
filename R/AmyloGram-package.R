@@ -1,12 +1,22 @@
 #' Prediction of amyloids
 #'
-#' Amyloids
+#' Amyloids are proteins associated with the number of clinical disorders (e.g.,
+#' Alzheimer's, Creutzfeldt-Jakob's and Huntington's diseases). Despite their
+#' diversity, all amyloid proteins can undergo aggregation initiated by 6- to
+#' 15-residue segments called hot spots. Henceforth, amyloids form unique,
+#' zipper-like beta-structures, which are often harmful. To find the patterns
+#' defining the hot spots, we developed our novel predictor of amyloidogenicity
+#' AmyloGram, based on random forests.
+#'
+#' AmyloGram is available as R function (\code{\link{predict.ag_model}}) or
+#' shiny GUI (\code{\link{AmyloGram_gui}}).
+#'
+#' The package is enriched with the benchmark data set \code{\link{pep424}}.
 #'
 #' @name AmyloGram-package
 #' @aliases AmyloGram-package AmyloGram
 #' @docType package
-#' @author Michal Burdukiewicz.
-#'
+#' @author
 #' Maintainer: Michal Burdukiewicz <michalburdukiewicz@@gmail.com>
 #' @references Burdukiewicz MJ, Sobczyk P, Roediger S, Duda-Madej A,
 #' Mackiewicz P, Kotulska M. (2016) \emph{Prediction of amyloidogenicity
@@ -19,4 +29,5 @@
 #' @importFrom seqinr a
 #' @importFrom shiny runApp
 #' @importFrom stats predict
+#' @importFrom utils capture.output
 NULL
