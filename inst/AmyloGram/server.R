@@ -67,7 +67,7 @@ shinyServer(function(input, output) {
     })
 
     if(exists("input_sequences")) {
-      tags$p(HTML("<A HREF=\"javascript:history.go(0)\">Start a new query with signalHsmm</A>"))
+      tags$p(HTML("<A HREF=\"javascript:history.go(0)\">Start a new query with AmyloGram</A>"))
     }
   })
 

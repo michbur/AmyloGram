@@ -8,6 +8,10 @@
 
 **Authors**: [Michal Burdukiewicz](http://www.smorfland.uni.wroc.pl/), [Piotr Sobczyk](http://prac.im.pwr.wroc.pl/~sobczyk/), [Malgorzata Kotulska](http://www.kotulska-lab.pwr.wroc.pl/).
 
+**Learn more**:
+* [AmyloGram preprint](https://peerj.com/preprints/2390/).  
+* [AmyloGram R package](https://github.com/michbur/AmyloGram). 
+
 **Example proteins**:
 
 
