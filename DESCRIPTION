@@ -29,6 +29,5 @@ Suggests:
     ggplot2,
     knitr,
     markdown,
-    rmarkdown,
-    signalHsmm
+    rmarkdown
 Repository: CRAN

@@ -12,7 +12,7 @@
 #' predict(AmyloGram_model, pep424[17])
 
 predict.ag_model <- function(object, newdata, ...) {
-  if(!any(is_protein(sapply(newdata, is_protein))))
+  if(any(!sapply(newdata, is_protein)))
     stop("Atypical aminoacid detected in input data.")
 
   seqs_m <- tolower(t(sapply(newdata, function(i)
