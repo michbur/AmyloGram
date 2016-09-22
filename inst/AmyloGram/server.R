@@ -20,6 +20,8 @@ my_DT <- function(x)
 
 shinyServer(function(input, output) {
 
+
+
   prediction <- reactive({
 
     if (!is.null(input[["seq_file"]]))
@@ -36,7 +38,12 @@ shinyServer(function(input, output) {
         #dummy error, just to stop further processing
         stop("Too many sequences.")
       } else {
-        predict(AmyloGram_model, input_sequences)
+        if(any(lengths(input_sequences) < 6)) {
+          #dummy error, just to stop further processing
+          stop("The minimum length of the sequence is 6 amino acids.")
+        } else {
+          predict(AmyloGram_model, input_sequences)
+        }
       }
     } else {
       NULL
@@ -50,7 +57,16 @@ shinyServer(function(input, output) {
 
 
   output$dynamic_ui <- renderUI({
-    if(!is.null(prediction())) {
+    if (!is.null(input[["seq_file"]]))
+      input_sequences <- read_txt(input[["seq_file"]][["datapath"]])
+    input[["use_area"]]
+    isolate({
+      if (!is.null(input[["text_area"]]))
+        if(input[["text_area"]] != "")
+          input_sequences <- read_txt(textConnection(input[["text_area"]]))
+    })
+
+    if(exists("input_sequences")) {
       tags$p(HTML("<A HREF=\"javascript:history.go(0)\">Start a new query with signalHsmm</A>"))
     }
   })

@@ -28,6 +28,7 @@
 #' @importFrom ranger ranger
 #' @importFrom seqinr a
 #' @importFrom shiny runApp
+#' @importFrom signalHsmm is_protein
 #' @importFrom stats predict
 #' @importFrom utils capture.output
 NULL

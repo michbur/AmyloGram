@@ -9,9 +9,12 @@
 #' @examples
 #' data(AmyloGram_model)
 #' data(pep424)
-#' predict(AmyloGram_model, pep424[1L:20])
+#' predict(AmyloGram_model, pep424[17])
 
 predict.ag_model <- function(object, newdata, ...) {
+  if(!any(is_protein(sapply(newdata, is_protein))))
+    stop("Atypical aminoacid detected in input data.")
+
   seqs_m <- tolower(t(sapply(newdata, function(i)
     c(i, rep(NA, max(lengths(newdata)) - length(i))))))
 
@@ -30,7 +33,15 @@ predict.ag_model <- function(object, newdata, ...) {
 
   test_lengths <- lengths(newdata) - 5
 
-  preds <- data.frame(prob = predict(object[["rf"]], data.frame(test_ngrams[, object[["imp_features"]]]))[["predictions"]][, 2],
+
+  raw_preds <- predict(object[["rf"]],
+                     data.frame(test_ngrams[, object[["imp_features"]],
+                                            drop = FALSE]))[["predictions"]]
+  preds <- data.frame(prob = if(is.matrix(raw_preds)) {
+    raw_preds[, 2]
+  } else {
+    raw_preds[2]
+  },
                       prot = unlist(lapply(1L:length(test_lengths), function(i) rep(i, test_lengths[i])))
   )
 
