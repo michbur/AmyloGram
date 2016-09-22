@@ -2,9 +2,11 @@ Package: AmyloGram
 Type: Package
 Title: Prediction of Amyloid Proteins
 Version: 1.0
-Author: c(person("Michal", "Burdukiewicz", email =
+LazyData: true
+Authors@R: c(person("Michal", "Burdukiewicz", email =
     "michalburdukiewicz@gmail.com", role = c("cre", "aut")),
-    person("Piotr", "Sobczyk", email = "sobbombo@gmail.com", role = "ctb"))
+    person("Piotr", "Sobczyk", email = "sobbombo@gmail.com", role = "ctb"),
+    person("Stefan", "Roediger", email = "stefan.roedigier@b-tu.de", role = "ctb"))
 Description: Prediction of amyloid proteins using n-gram encoding and
     random forests. The implemented algorithm can be accessed from
     both the command line and shiny-based GUI.
@@ -18,10 +20,13 @@ Depends:
 Imports:
     biogram,
     ranger,
+    seqinr,
     shiny
 Suggests:
     DT,
     ggplot2,
     knitr,
     markdown,
-    rmarkdown
+    rmarkdown,
+    signalHsmm
+Repository: CRAN

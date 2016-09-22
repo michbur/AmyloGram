@@ -4,10 +4,10 @@
 \name{AmyloGram_model}
 \alias{AmyloGram_model}
 \title{Random forest model of amyloid proteins}
-\format{A list of length three: random forest, a vector of important n-grams 
+\format{A list of length three: random forest, a vector of important n-grams
 and the best-performing encoding.}
 \description{
-Random forest grown using the \code{ranger} package with additional 
+Random forest grown using the \code{ranger} package with additional
 information.
 }
 \seealso{

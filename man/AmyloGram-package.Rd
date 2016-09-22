@@ -6,7 +6,7 @@
 \alias{AmyloGram-package}
 \title{Prediction of amyloids}
 \description{
-Words here.
+Amyloids
 }
 \author{
 Michal Burdukiewicz.
@@ -14,7 +14,7 @@ Michal Burdukiewicz.
 Maintainer: Michal Burdukiewicz <michalburdukiewicz@gmail.com>
 }
 \references{
-Burdukiewicz MJ, Sobczyk P, Rödiger S, Duda-Madej A,
+Burdukiewicz MJ, Sobczyk P, Roediger S, Duda-Madej A,
 Mackiewicz P, Kotulska M. (2016) \emph{Prediction of amyloidogenicity
 based on the n-gram analysis}. PeerJ Preprints 4:e2390v1
 \url{https://doi.org/10.7287/peerj.preprints.2390v1}

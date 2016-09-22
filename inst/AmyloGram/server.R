@@ -2,6 +2,7 @@ library(shiny)
 library(markdown)
 library(DT)
 library(AmyloGram)
+library(signalHsmm)
 
 data(AmyloGram_model)
 data(spec_sens)
@@ -13,14 +14,14 @@ options(DT.options = list(dom = "Brtip",
 ))
 
 my_DT <- function(x)
-  datatable(x, escape = FALSE, extensions = 'Buttons', 
+  datatable(x, escape = FALSE, extensions = 'Buttons',
             filter = "top", rownames = FALSE)
 
 
 shinyServer(function(input, output) {
-  
+
   prediction <- reactive({
-    
+
     if (!is.null(input[["seq_file"]]))
       input_sequences <- read_txt(input[["seq_file"]][["datapath"]])
     input[["use_area"]]
@@ -29,35 +30,35 @@ shinyServer(function(input, output) {
         if(input[["text_area"]] != "")
           input_sequences <- read_txt(textConnection(input[["text_area"]]))
     })
-    
+
     if(exists("input_sequences")) {
       if(length(input_sequences) > 100) {
         #dummy error, just to stop further processing
         stop("Too many sequences.")
       } else {
-        predict_AmyloGram(AmyloGram_model, input_sequences)
+        predict(AmyloGram_model, input_sequences)
       }
     } else {
       NULL
     }
   })
-  
+
   decision <- reactive({
     if(!is.null(prediction()))
-      make_decision(prediction(), input[["cutoff"]])
+      AmyloGram:::make_decision(prediction(), input[["cutoff"]])
   })
-  
-  
+
+
   output$dynamic_ui <- renderUI({
     if(!is.null(prediction())) {
       tags$p("Refresh page (press F5) to start a new query with signalHsmm.")
     }
   })
-  
+
   output$pred_table <- DT::renderDataTable({
     formatRound(my_DT(decision()), 2, 4)
   })
-  
+
   output$sensitivity <- renderUI({
     dat <- spec_sens[spec_sens[["Cutoff"]] == input[["cutoff"]], ]
     HTML(paste0("Sensitivity: ", round(dat[["Sensitivity"]], 4), "<br>",
@@ -66,10 +67,10 @@ shinyServer(function(input, output) {
     ))
   })
 
-  
+
   output$dynamic_tabset <- renderUI({
     if(is.null(prediction())) {
-      
+
       tabPanel(title = "Sequence input",
                tags$textarea(id = "text_area", style = "width:90%",
                              placeholder="Paste sequences (FASTA format required) here...", rows = 22, cols = 60, ""),
@@ -77,22 +78,22 @@ shinyServer(function(input, output) {
                actionButton("use_area", "Submit data from field above"),
                p(""),
                fileInput('seq_file', 'Submit .fasta or .txt file:'))
-      
-      
+
+
     } else {
-      tabPanel("Short output", 
+      tabPanel("Short output",
                DT::dataTableOutput("pred_table"),
                HTML("Adjust cutoff to obtain required specificity and sensitivity. <br> The cutoff value affects decisions made by AmyloGram."),
                br(),
                br(),
                fluidRow(
-                 column(3, numericInput("cutoff", value = 0.5, 
+                 column(3, numericInput("cutoff", value = 0.5,
                                         label = "Cutoff", min = 0.01, max = 0.95, step = 0.01)),
                  column(3, htmlOutput("sensitivity"))
                )
       )
     }
   })
-  
-  
+
+
 })
