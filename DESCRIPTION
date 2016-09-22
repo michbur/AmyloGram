@@ -22,7 +22,8 @@ Imports:
     biogram,
     ranger,
     seqinr,
-    shiny
+    shiny,
+    signalHsmm
 Suggests:
     DT,
     ggplot2,
