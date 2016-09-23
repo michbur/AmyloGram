@@ -25,8 +25,5 @@ Imports:
     shiny
 Suggests:
     DT,
-    ggplot2,
-    knitr,
-    markdown,
-    rmarkdown
+    knitr
 Repository: CRAN
