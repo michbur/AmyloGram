@@ -1,5 +1,4 @@
 library(shiny)
-library(markdown)
 library(DT)
 library(AmyloGram)
 
