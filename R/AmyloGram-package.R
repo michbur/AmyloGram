@@ -26,9 +26,8 @@
 #' @importFrom biogram count_multigrams decode_ngrams degenerate seq2ngrams
 #' test_features
 #' @importFrom ranger ranger
-#' @importFrom seqinr a
+#' @importFrom seqinr a read.fasta
 #' @importFrom shiny runApp
-#' @importFrom signalHsmm is_protein
 #' @importFrom stats predict
 #' @importFrom utils capture.output
 NULL

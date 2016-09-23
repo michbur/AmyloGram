@@ -2,7 +2,6 @@ library(shiny)
 library(markdown)
 library(DT)
 library(AmyloGram)
-library(signalHsmm)
 
 data(AmyloGram_model)
 data(spec_sens)
