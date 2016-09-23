@@ -1,5 +1,5 @@
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/AmyloGram)](http://cran.r-project.org/package=AmyloGram)
-[![Downloads](http://cranlogs.r-pkg.org/badges/AmyloGram)](http://cran.rstudio.com/package=AmyloGram)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/AmyloGram)](https://cran.r-project.org/package=AmyloGram)
+[![Downloads](http://cranlogs.r-pkg.org/badges/AmyloGram)](https://cran.r-project.org/package=AmyloGram)
 [![Build Status](https://api.travis-ci.org/michbur/AmyloGram.png)](https://travis-ci.org/michbur/AmyloGram)
 
 <img src="https://github.com/michbur/AmyloGram/blob/master/inst/AmyloGram/AmyloGram_logo.png" alt="AmyloGram" style="height: 200px;"/>

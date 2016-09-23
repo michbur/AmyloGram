@@ -67,7 +67,7 @@ shinyServer(function(input, output) {
     })
 
     if(exists("input_sequences")) {
-      tags$p(HTML("<A HREF=\"javascript:history.go(0)\">Start a new query with AmyloGram</A>"))
+      tags$p(HTML("<h3><A HREF=\"javascript:history.go(0)\">Start a new query</A></h3>"))
     }
   })
 
@@ -99,7 +99,8 @@ shinyServer(function(input, output) {
     } else {
       tabPanel("Short output",
                DT::dataTableOutput("pred_table"),
-               HTML("Adjust cutoff to obtain required specificity and sensitivity. <br> The cutoff value affects decisions made by AmyloGram."),
+               HTML("Adjust cutoff to obtain required specificity and sensitivity. <br>
+                    The cutoff value affects decisions made by AmyloGram (Amyloid field in the table)."),
                br(),
                br(),
                fluidRow(
