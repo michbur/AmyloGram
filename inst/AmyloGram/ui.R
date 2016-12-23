@@ -1,6 +1,7 @@
 library(shiny)
 
-shinyUI(fluidPage(title = "AmyloGram",
+shinyUI(fluidPage(tags$head(includeScript("ga.js")),
+                  title = "AmyloGram",
                   includeCSS = "www/shiny_paper.css",
 
                   headerPanel(""),
