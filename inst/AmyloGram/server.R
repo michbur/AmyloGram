@@ -13,7 +13,7 @@ options(DT.options = list(dom = "Brtip",
 
 my_DT <- function(x)
   datatable(x, escape = FALSE, extensions = 'Buttons',
-            filter = "top", rownames = FALSE)
+            filter = "none", rownames = FALSE)
 
 
 shinyServer(function(input, output) {
@@ -49,8 +49,11 @@ shinyServer(function(input, output) {
   })
 
   decision <- reactive({
-    if(!is.null(prediction()))
-      AmyloGram:::make_decision(prediction(), input[["cutoff"]])
+    if(!is.null(prediction())) {
+      res <- AmyloGram:::make_decision(prediction(), input[["cutoff"]])
+      colnames(res) <- c("Input name", "Amyloid probability", "Is amyloid?")
+      res
+    }
   })
 
 
@@ -97,8 +100,9 @@ shinyServer(function(input, output) {
     } else {
       tabPanel("Short output",
                DT::dataTableOutput("pred_table"),
-               HTML("Adjust cutoff to obtain required specificity and sensitivity. <br>
-                    The cutoff value affects decisions made by AmyloGram (Amyloid field in the table)."),
+               h4("Cut-off adjustment"),
+               HTML("Adjust a cut-off (a probability threshold) to obtain required specificity and sensitivity. <br>
+                    The cut-off value affects decisions made by AmyloGram ('Is amyloid?' field in the table)."),
                br(),
                br(),
                fluidRow(
