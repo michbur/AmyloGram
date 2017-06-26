@@ -98,7 +98,8 @@ shinyServer(function(input, output) {
 
 
     } else {
-      tabPanel("Short output",
+      tabsetPanel(
+        tabPanel("Results",
                DT::dataTableOutput("pred_table"),
                h4("Cut-off adjustment"),
                HTML("Adjust a cut-off (a probability threshold) to obtain required specificity and sensitivity. <br>
@@ -109,6 +110,10 @@ shinyServer(function(input, output) {
                  column(3, numericInput("cutoff", value = 0.5,
                                         label = "Cutoff", min = 0.01, max = 0.95, step = 0.01)),
                  column(3, htmlOutput("sensitivity"))
+               )
+      ),
+      tabPanel("Output format",
+               includeMarkdown("output_format.md")
                )
       )
     }
