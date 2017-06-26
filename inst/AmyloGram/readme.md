@@ -4,7 +4,7 @@
 
 **Restrictions**:
 * Be patient - calculations can take up to few minutes.  
-* Up to 100 sequences may be analyzed at the same time using web server. If you need larger query, please use the [AmyloGram](https://CRAN.R-project.org/package=AmyloGram) package for **R**.
+* Up to 50 sequences may be analyzed at the same time using web server. If you need larger query, please use the [AmyloGram](https://CRAN.R-project.org/package=AmyloGram) package for **R**.
 
 **Authors**: [Michal Burdukiewicz](http://www.smorfland.uni.wroc.pl/), [Piotr Sobczyk](http://prac.im.pwr.wroc.pl/~sobczyk/).
 

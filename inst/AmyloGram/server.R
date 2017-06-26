@@ -32,7 +32,7 @@ shinyServer(function(input, output) {
     })
 
     if(exists("input_sequences")) {
-      if(length(input_sequences) > 100) {
+      if(length(input_sequences) > 50) {
         #dummy error, just to stop further processing
         stop("Too many sequences.")
       } else {
