@@ -14,4 +14,3 @@ information.
 \code{\link[ranger]{ranger}}
 }
 \keyword{datasets}
-

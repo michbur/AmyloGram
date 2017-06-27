@@ -22,4 +22,3 @@ data(AmyloGram_model)
 data(pep424)
 predict(AmyloGram_model, pep424[17])
 }
-

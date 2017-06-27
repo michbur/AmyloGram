@@ -1,11 +1,10 @@
 Package: AmyloGram
 Type: Package
 Title: Prediction of Amyloid Proteins
-Version: 1.0
-LazyData: true
+Version: 1.1
+LazyData: TRUE
 Date: 2016-09-23
-Authors@R: c(person("Michal", "Burdukiewicz", email =
-    "michalburdukiewicz@gmail.com", role = c("cre", "aut")),
+Authors@R: c(person("Michal", "Burdukiewicz", email = "michalburdukiewicz@gmail.com", role = c("cre", "aut")),
     person("Piotr", "Sobczyk", email = "sobbombo@gmail.com", role = "ctb"),
     person("Stefan", "Roediger", email = "stefan.roedigier@b-tu.de", role = "ctb"))
 Description: Predicts amyloid proteins using random forests trained on the
@@ -14,8 +13,7 @@ Description: Predicts amyloid proteins using random forests trained on the
 License: GPL-3
 URL: https://github.com/michbur/AmyloGram
 BugReports: https://github.com/michbur/AmyloGram/issues
-LazyData: TRUE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 Depends:
     R (>= 3.0.0)
 Imports:

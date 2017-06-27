@@ -15,4 +15,3 @@ is_protein(object)
 \description{
 Checks if an object is a protein (contains letters from one-letter amino acid code).
 }
-

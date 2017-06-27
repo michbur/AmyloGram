@@ -21,4 +21,3 @@ The input file should contain one or more amino acid sequences separated by
 empty line(s).
 }
 \keyword{manip}
-

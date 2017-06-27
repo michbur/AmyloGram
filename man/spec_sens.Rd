@@ -18,4 +18,3 @@ Sensitivity, specificity and Matthew's Correlation Coefficient
 of AmyloGram for different cutoffs computed on \code{pep424} dataset.
 }
 \keyword{datasets}
-

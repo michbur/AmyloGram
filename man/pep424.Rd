@@ -18,4 +18,3 @@ Benchmark dataset for PASTA 2.0. 5 sequences shorter than 6 amino acids
 (1\% of the original dataset) were removed.
 }
 \keyword{datasets}
-

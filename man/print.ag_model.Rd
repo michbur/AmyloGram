@@ -18,4 +18,3 @@ Prints \code{ag_model} objects.
 data(AmyloGram_model)
 print(AmyloGram_model)
 }
-
