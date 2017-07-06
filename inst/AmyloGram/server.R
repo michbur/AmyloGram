@@ -72,8 +72,9 @@ shinyServer(function(input, output) {
     }
   })
 
-  output$pred_table <- DT::renderDataTable({
-    formatRound(my_DT(decision()), 2, 4)
+  output$pred_table <- renderTable({
+    #formatRound(my_DT(decision()), 2, 4)
+    decision()
   })
 
   output$sensitivity <- renderUI({
@@ -84,6 +85,12 @@ shinyServer(function(input, output) {
     ))
   })
 
+  output$downloadData <- downloadHandler(
+    filename = function() { "AmyloGram_results.csv" },
+    content = function(file) {
+      write.csv(decision(), file)
+    }
+  )
 
   output$dynamic_tabset <- renderUI({
     if(is.null(prediction())) {
@@ -100,7 +107,8 @@ shinyServer(function(input, output) {
     } else {
       tabsetPanel(
         tabPanel("Results",
-               DT::dataTableOutput("pred_table"),
+               tableOutput("pred_table"),
+               downloadButton('downloadData', 'Download results (.csv)'),
                h4("Cut-off adjustment"),
                HTML("Adjust a cut-off (a probability threshold) to obtain required specificity and sensitivity. <br>
                     The cut-off value affects decisions made by AmyloGram ('Is amyloid?' field in the table)."),
@@ -112,7 +120,7 @@ shinyServer(function(input, output) {
                  column(3, htmlOutput("sensitivity"))
                )
       ),
-      tabPanel("Output format",
+      tabPanel("Explained output format",
                includeMarkdown("output_format.md")
                )
       )

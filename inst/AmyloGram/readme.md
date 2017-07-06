@@ -12,6 +12,6 @@
 * [AmyloGram preprint](https://peerj.com/preprints/2390/).  
 * [AmyloGram R package](https://github.com/michbur/AmyloGram). 
 
-**Example proteins**:
+**Examplary input**:
 
 
