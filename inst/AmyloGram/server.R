@@ -120,7 +120,7 @@ shinyServer(function(input, output) {
                  column(3, htmlOutput("sensitivity"))
                )
       ),
-      tabPanel("Explained output format",
+      tabPanel("Help (explained output format)",
                includeMarkdown("output_format.md")
                )
       )
