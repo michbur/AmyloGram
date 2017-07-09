@@ -7,7 +7,7 @@
 Predict amyloid proteins
 -------------------------
 
-AmyloGram predicts presence of signal peptides in eukaryotic proteins using hidden semi-Markov models. The implemented algorithm can be accessed as a web-based service http://www.smorfland.uni.wroc.pl/shiny/AmyloGram/ 
+AmyloGram predicts amyloid proteins using n-gram encoding and random forests. The implemented algorithm can be accessed as a web-based service http://www.smorfland.uni.wroc.pl/shiny/AmyloGram/. 
 
 Local instance of AmyloGram
 ------------------------
