@@ -7,11 +7,11 @@
 Predict amyloid proteins
 -------------------------
 
-AmyloGram predicts amyloid proteins using n-gram encoding and random forests. The implemented algorithm can be accessed as a web-based service http://www.smorfland.uni.wroc.pl/shiny/AmyloGram/. 
+AmyloGram predicts amyloid proteins using n-gram encoding and random forests. It can be also accessed as a web-based service http://www.smorfland.uni.wroc.pl/shiny/AmyloGram/. 
 
 Local instance of AmyloGram
 ------------------------
-AmyloGram can be also used locally as the R package. It can be installed from CRAN using:
+AmyloGram can be used installed from CRAN as the R package:
 
 ```R
 install.packages("AmyloGram")
@@ -23,8 +23,7 @@ You can install the latest development version of the code using the `devtools` 
 # Install devtools, if you haven't already.
 install.packages("devtools")
 
-library(devtools)
-install_github("michbur/AmyloGram")
+devtools::install_github("michbur/AmyloGram")
 ```
 
 After installation GUI can be accessed locally:
