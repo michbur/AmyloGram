@@ -1,5 +1,4 @@
 library(shiny)
-library(DT)
 library(AmyloGram)
 
 data(AmyloGram_model)
