@@ -1,24 +1,12 @@
 citHeader("To cite AmyloGram in publications, please use:")
 
-if(!exists("meta") || is.null(meta)) meta <- packageDescription("AmyloGram")
-year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
-vers <- paste("R package version", meta$Version)
-title <- paste0(meta[["Package"]], ": ", tolower(meta[["Title"]]))
-url <- paste0("https://cran.r-project.org/package=", meta[["Package"]])
-
-citEntry(entry = "Manual",
-  author = "Michal Burdukiewicz and Piotr Sobczyk and Stefan Roediger",
-  title = title,
-  year = year,
-  note = vers,
-  url = "https://cran.r-project.org/package=AmyloGram",
-  textVersion = paste0("Burdukiewicz M, Sobczyk P and Roediger S (",
-           year,
-           "). ",
-           title,
-           ". ",
-           vers,
-           ". ",
-           url,
-           ".")
+citEntry(entry = "Article",
+  author = "Michal Burdukiewicz and Piotr Sobczyk and Stefan Roediger and Anna Duda-Madej and Pawel Mackiewicz and Malgorzata Kotulska",
+  title = "Amyloidogenic motifs revealed by n-gram analysis",
+  year = "2017",
+  doi = "10.1038/s41598-017-13210-9",
+  url = "https://www.nature.com/articles/s41598-017-13210-9",
+  journal = "Scientific Reports",
+  volume = "7",
+  textVersion = "Burdukiewicz, M., Sobczyk, P., Roediger, S., Duda-Madej, A., Mackiewicz, P., and Kotulska, M. (2017). Amyloidogenic motifs revealed by n-gram analysis. Scientific Reports 7, 12961. https://www.nature.com/articles/s41598-017-13210-9"
 )

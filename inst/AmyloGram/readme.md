@@ -8,9 +8,8 @@
 
 **Authors**: [Michal Burdukiewicz](http://www.smorfland.uni.wroc.pl/), [Piotr Sobczyk](http://prac.im.pwr.wroc.pl/~sobczyk/).
 
-**Learn more**:
-* [AmyloGram preprint](https://peerj.com/preprints/2390/).  
-* [AmyloGram R package](https://github.com/michbur/AmyloGram). 
+**Citation**:
+[Burdukiewicz, M., Sobczyk, P., Rödiger, S., Duda-Madej, A., Mackiewicz, P., and Kotulska, M. (2017). Amyloidogenic motifs revealed by n-gram analysis. Scientific Reports 7, 12961.](https://www.nature.com/articles/s41598-017-13210-9)
 
 **Examplary input**:
 
