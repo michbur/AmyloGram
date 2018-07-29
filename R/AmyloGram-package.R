@@ -23,8 +23,8 @@
 #' by n-gram analysis}. Scientific Reports 7
 #' \url{https://doi.org/10.1038/s41598-017-13210-9}
 #' @keywords package
-#' @importFrom biogram count_multigrams decode_ngrams degenerate seq2ngrams
-#' test_features
+#' @importFrom biogram count_multigrams decode_ngrams degenerate get_ngrams_ind 
+#' seq2ngrams test_features
 #' @importFrom ranger ranger
 #' @importFrom seqinr a read.fasta
 #' @importFrom shiny runApp

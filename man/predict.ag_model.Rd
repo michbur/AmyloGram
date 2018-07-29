@@ -20,5 +20,5 @@ Recognizes amyloids using AmyloGram algorithm.
 \examples{
 data(AmyloGram_model)
 data(pep424)
-predict(AmyloGram_model, pep424[17])
+predict(AmyloGram_model, pep424[c(4, 10)])
 }
