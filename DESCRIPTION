@@ -25,4 +25,7 @@ Imports:
     ranger,
     seqinr,
     shiny
+Suggests:
+    dplyr,
+    DT
 Repository: CRAN
