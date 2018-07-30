@@ -49,7 +49,7 @@ shinyServer(function(input, output) {
   
   decision <- reactive({
     if(!is.null(prediction())) {
-      res <- AmyloGram:::make_decision(prediction(), input[["cutoff"]])
+      res <- AmyloGram:::make_decision(prediction()[["overview"]], input[["cutoff"]])
       colnames(res) <- c("Input name", "Amyloid probability", "Is amyloid?")
       res
     }

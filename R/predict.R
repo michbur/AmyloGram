@@ -51,7 +51,7 @@ predict.ag_model <- function(object, newdata, ...) {
     pos_matrix <- do.call(cbind, get_ngrams_ind(length(hexapeptide_preds) + 5, 6, 0))
     data.frame(
       Protein = names(newdata)[single_prot],
-      Aa = toupper(seqs_m[single_prot, ]),
+      Aa = toupper(na.omit(seqs_m[single_prot, ])),
       Probability = unlist(lapply(unique(as.vector(pos_matrix)), function(i)
         max(hexapeptide_preds[which(pos_matrix == i, arr.ind = TRUE)[, "row"]])
       )))
