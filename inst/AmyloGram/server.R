@@ -109,7 +109,8 @@ shinyServer(function(input, output) {
       ggplot(aes(x = Position, y = Probability)) +
       geom_line() +
       geom_hline(yintercept = input[["cutoff"]], color = "blue", linetype = "dashed") +
-      scale_y_continuous("Probability of self-assembly") +
+      scale_y_continuous("Probability of self-assembly", limits = c(0, 1)) +
+      scale_x_continuous(expand = c(0, 0)) +
       facet_wrap(~ Protein, ncol = 1) +
       theme_bw()
   })
@@ -121,13 +122,6 @@ shinyServer(function(input, output) {
                 "MCC: ", round(dat[["MCC"]], 4)
     ))
   })
-  
-  output[["downloadData"]] <- downloadHandler(
-    filename = function() { "AmyloGram_results.csv" },
-    content = function(file) {
-      write.csv(decision(), file)
-    }
-  )
   
   output[["dynamic_tabset"]] <- renderUI({
     if(is.null(prediction())) {
@@ -148,10 +142,12 @@ shinyServer(function(input, output) {
                  #downloadButton('downloadData', 'Download results (.csv)'),
         ),
         tabPanel("Detailed results",
-                 h4("Residues belonging to amyloid region"),
+                 h4("Amyloid residues"),
+                 p("Residues are defined as belonging to the amyloid part of a protein, if their amyloid 
+                   probability is higher than the cut-off"),
                  dataTableOutput("ar_table"),
                  h4("Amyloid regions"),
-                 plotOutput("pred_plots")
+                 plotOutput("pred_plots", height = paste0(150 + nrow(decision()) * 100, "px"))
         ),
         tabPanel("Help (explained output format)",
                  includeMarkdown("output_format.md")
