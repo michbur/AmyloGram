@@ -27,5 +27,6 @@ Imports:
     shiny
 Suggests:
     dplyr,
-    DT
+    DT,
+    shinythemes
 Repository: CRAN

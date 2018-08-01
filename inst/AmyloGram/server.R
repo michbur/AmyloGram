@@ -3,6 +3,7 @@ library(ggplot2)
 library(AmyloGram)
 library(dplyr)
 library(DT)
+library(shinythemes)
 
 data(AmyloGram_model)
 data(spec_sens)
@@ -15,7 +16,8 @@ options(DT.options = list(dom = "Brtip",
 ))
 
 my_DT <- function(x, ...)
-  datatable(x, ..., escape = FALSE, extensions = 'Buttons', filter = "top", rownames = FALSE)
+  datatable(x, ..., escape = FALSE, extensions = 'Buttons', filter = "top", rownames = FALSE,
+            style = "bootstrap")
 
 
 shinyServer(function(input, output) {
