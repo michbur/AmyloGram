@@ -9,7 +9,6 @@ shinyUI(fluidPage(tags$head(includeScript("ga.js")),
                   sidebarLayout(
                     sidebarPanel(style = "background-color: #e0e0e0;",
                                  includeMarkdown("readme.md"),
-                                 pre(includeText("prots.txt")),
                                  uiOutput("dynamic_ui")
                     ),
 

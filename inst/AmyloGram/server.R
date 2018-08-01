@@ -70,17 +70,23 @@ shinyServer(function(input, output) {
     })
     
     if(exists("input_sequences")) {
-      fluidRow(h4("Cut-off adjustment"),
-      HTML("Adjust a cut-off (a probability threshold) to obtain required specificity and sensitivity. <br>
-                    The cut-off value affects decisions made by AmyloGram ('Is amyloid?' field in the table and amyloid residues)."),
-      br(),
-      br(),
       fluidRow(
-        column(3, numericInput("cutoff", value = 0.5,
-                               label = "Cutoff", min = 0.01, max = 0.95, step = 0.01)),
-        column(3, htmlOutput("sensitivity"))
-      ),
-      tags$p(HTML("<h3><A HREF=\"javascript:history.go(0)\">Start a new query</A></h3>"))
+        h4("Cut-off adjustment"),
+        HTML("Adjust a cut-off (a probability threshold) to obtain required specificity and sensitivity. <br>
+                    The cut-off value affects decisions made by AmyloGram ('Is amyloid?' field in the table and amyloid residues)."),
+        br(),
+        br(),
+        fluidRow(
+          column(3, numericInput("cutoff", value = 0.5,
+                                 label = "Cutoff", min = 0.01, max = 0.95, step = 0.01)),
+          column(3, htmlOutput("sensitivity"))
+        ),
+        tags$p(HTML("<h3><A HREF=\"javascript:history.go(0)\">Start a new query</A></h3>"))
+      )
+    } else {
+      fluidRow(
+        h4("Exemplary sequences"),
+        pre(includeText("prots.txt"))
       )
     }
   })
@@ -148,9 +154,6 @@ shinyServer(function(input, output) {
                  dataTableOutput("ar_table"),
                  h4("Amyloid regions"),
                  plotOutput("pred_plots", height = paste0(150 + nrow(decision()) * 100, "px"))
-        ),
-        tabPanel("Help (explained output format)",
-                 includeMarkdown("output_format.md")
         )
       )
     }
