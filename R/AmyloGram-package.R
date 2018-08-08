@@ -28,6 +28,6 @@
 #' @importFrom ranger ranger
 #' @importFrom seqinr a read.fasta
 #' @importFrom shiny runApp
-#' @importFrom stats predict
+#' @importFrom stats predict na.omit
 #' @importFrom utils capture.output
 NULL
