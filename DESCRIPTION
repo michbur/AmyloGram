@@ -29,5 +29,6 @@ Imports:
 Suggests:
     dplyr,
     DT,
+    markdown,
     shinythemes
 Repository: CRAN
