@@ -4,6 +4,7 @@ library(AmyloGram)
 library(dplyr)
 library(DT)
 library(shinythemes)
+library(markdown)
 
 data(AmyloGram_model)
 data(spec_sens)
