@@ -17,7 +17,7 @@ AmyloGram can be used installed from CRAN as the R package:
 install.packages("AmyloGram")
 ```
 
-You can install the latest development version of the code using the `devtools` R package.
+You can install the latest development version of the package:
 
 ```R
 source("https://install-github.me/michbur/AmyloGram")
