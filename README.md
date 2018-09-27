@@ -18,13 +18,10 @@ AmyloGram can be used installed from CRAN as the R package:
 install.packages("AmyloGram")
 ```
 
-You can install the latest development version of the code using the `devtools` R package.
+You can install the latest development version of the package:
 
 ```R
-# Install devtools, if you haven't already.
-install.packages("devtools")
-
-devtools::install_github("michbur/AmyloGram")
+source("https://install-github.me/michbur/AmyloGram")
 ```
 
 After installation GUI can be accessed locally:
