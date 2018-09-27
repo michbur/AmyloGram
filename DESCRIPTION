@@ -3,7 +3,7 @@ Type: Package
 Title: Prediction of Amyloid Proteins
 Version: 1.2
 LazyData: TRUE
-Date: 2018-08-10
+Date: 2018-10-10
 Authors@R: c(person("Michal", "Burdukiewicz", 
     email = "michalburdukiewicz@gmail.com", 
     role = c("cre", "aut"),
