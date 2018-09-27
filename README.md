@@ -1,3 +1,4 @@
+[![published in: Scientific Reports](https://img.shields.io/badge/published%20in-Scientific%20Reports-green.svg)](https://doi.org/10.1038/s41598-017-13210-9)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/AmyloGram)](https://cran.r-project.org/package=AmyloGram)
 [![Downloads](http://cranlogs.r-pkg.org/badges/AmyloGram)](https://cran.r-project.org/package=AmyloGram)
 [![Build Status](https://api.travis-ci.org/michbur/AmyloGram.png)](https://travis-ci.org/michbur/AmyloGram)
