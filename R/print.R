@@ -23,3 +23,20 @@ print.ag_model <- function(x, ...) {
       )
   print(enc_dat)
 }
+
+
+#' Print AmyloGram prediction
+#'
+#' Prints \code{ag_prediction} objects.
+#' @param x \code{ag_prediction} object.
+#' @param ... further arguments passed to or from other methods.
+#' @export
+#' @examples
+#' data(AmyloGram_model)
+#' data(pep424)
+#' pred <- predict(AmyloGram_model, pep424[c(4, 10)])
+#' print(pred)
+
+print.ag_prediction <- function(x, ...) {
+  print(x[["overview"]], ...)
+}

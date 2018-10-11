@@ -58,9 +58,13 @@ predict.ag_model <- function(object, newdata, ...) {
   }))
   
   
-  list(overview = data.frame(Name = names(newdata),
+  res <- list(overview = data.frame(Name = names(newdata),
                              Probability = vapply(unique(preds[["prot"]]), function(single_prot)
                                max(preds[preds[["prot"]] == single_prot, "prob"]),
                                0)),
        detailed = detailed_preds)
+  
+  class(res) <- "ag_prediction"
+  
+  res
 }
