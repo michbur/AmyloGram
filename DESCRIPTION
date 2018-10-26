@@ -9,6 +9,10 @@ Authors@R: c(person("Michal", "Burdukiewicz",
     role = c("cre", "aut"),
     comment = c(ORCID = "0000-0001-8926-582X")),
     person("Piotr", "Sobczyk", email = "sobbombo@gmail.com", role = "ctb"),
+    person("Jaroslaw", "Chilimoniuk", 
+           email = "jaroslaw.chilimoniuk@gmail.com", 
+           comment = c(ORCID = "0000-0001-5467-018X"),
+           role = c("ctb")),
     person("Stefan", "Roediger", email = "stefan.roedigier@b-tu.de", role = "ctb", 
     comment = c(ORCID = "0000-0002-1441-6512")))
 Description: Predicts amyloid proteins using random forests trained on the
