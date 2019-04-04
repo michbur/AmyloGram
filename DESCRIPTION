@@ -5,23 +5,26 @@ Version: 1.2
 LazyData: TRUE
 Date: 2018-10-10
 Authors@R: c(person("Michal", "Burdukiewicz", 
-    email = "michalburdukiewicz@gmail.com", 
-    role = c("cre", "aut"),
-    comment = c(ORCID = "0000-0001-8926-582X")),
+                    email = "michalburdukiewicz@gmail.com", 
+                    role = c("cre", "aut"),
+                    comment = c(ORCID = "0000-0001-8926-582X")),
     person("Piotr", "Sobczyk", email = "sobbombo@gmail.com", role = "ctb"),
     person("Jaroslaw", "Chilimoniuk", 
            email = "jaroslaw.chilimoniuk@gmail.com", 
            comment = c(ORCID = "0000-0001-5467-018X"),
            role = c("ctb")),
-    person("Stefan", "Roediger", email = "stefan.roedigier@b-tu.de", role = "ctb", 
-    comment = c(ORCID = "0000-0002-1441-6512")))
+    person("Stefan", "Roediger", 
+           email = "stefan.roedigier@b-tu.de", 
+           role = "ctb", 
+           comment = c(ORCID = "0000-0002-1441-6512")),
+    person("Dominik", "Rafacz", role = "ctb"))
 Description: Predicts amyloid proteins using random forests trained on the
     n-gram encoded peptides. The implemented algorithm can be accessed from
     both the command line and shiny-based GUI.
 License: GPL-3
 URL: https://github.com/michbur/AmyloGram
 BugReports: https://github.com/michbur/AmyloGram/issues
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Encoding: UTF-8
 Depends:
     R (>= 3.0.0)
