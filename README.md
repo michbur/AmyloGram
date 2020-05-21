@@ -21,7 +21,7 @@ install.packages("AmyloGram")
 You can install the latest development version of the package:
 
 ```R
-source("https://install-github.me/michbur/AmyloGram")
+source("https://raw.githubusercontent.com/r-lib/remotes/master/install-github.R")$value("michbur/AmyloGram")
 ```
 
 After installation GUI can be accessed locally:
